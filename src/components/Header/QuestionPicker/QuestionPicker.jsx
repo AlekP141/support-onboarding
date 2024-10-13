@@ -1,16 +1,22 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { QuestionContext } from "../../../App";
+import { FetchIndex, FormatIndices } from "./FetchIndex";
 
 const QuestionPicker = ({ setQuestion }) => {
   const question = useContext(QuestionContext);
 
-  const QUESTIONLIST = [
-    { topic: "synonyms", questionNumber: 1 },
-    { topic: "synonyms", questionNumber: 2 },
-    { topic: "rules", questionNumber: 1 },
-    { topic: "rules", questionNumber: 2 },
-    { topic: "rules", questionNumber: 3 },
-  ];
+  const [questionList, setQuestionList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const indices = await FetchIndex();
+      const formattedData = FormatIndices(indices);
+      setQuestionList(formattedData);
+    };
+
+    fetchData();
+  }, []);
+
 
   const handleQuestionChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +26,9 @@ const QuestionPicker = ({ setQuestion }) => {
     }));
   };
 
-  const filteredQuestions = QUESTIONLIST.filter((q) => q.topic === question.topic);
+  const filteredQuestions = questionList.filter((q) => q.topic === question.topic);
+
+
 
   return (
     <form className="question-picker">
@@ -30,7 +38,7 @@ const QuestionPicker = ({ setQuestion }) => {
         value={question.topic}
         onChange={handleQuestionChange}
       >
-        {[...new Set(QUESTIONLIST.map((q) => q.topic))].map((topic) => (
+        {[...new Set(questionList.map((q) => q.topic))].map((topic) => (
           <option key={topic} value={topic}>
             {topic}
           </option>
