@@ -1,8 +1,21 @@
 header {
-  justify-content: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ticket-border-color);
+  padding-block: 1rem;
+  background-color: var(--ticket-bg);
+  padding-inline: 1rem;
 }
 
-.main-title {
-  margin-top: 0;
-  padding-top: 1rem;
+header p {
+  font-weight: 700;
+}
+
+.header-resources {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-useful-group {
+  display: flex;
+  gap: 0.5rem;
 }

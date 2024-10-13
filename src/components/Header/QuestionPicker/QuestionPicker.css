@@ -1,4 +1,12 @@
 .question-picker {
-  position: absolute;
-  left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.question-picker select {
+  background-color: var(--ticket-bg);
+  border: 1px solid var(--ticket-border-color);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
 }

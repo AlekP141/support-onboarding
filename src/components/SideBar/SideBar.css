@@ -1,0 +1,35 @@
+.side-bar-container {
+  width: 25%;
+  max-width: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-right: solid 1px var(--ticket-border-color);
+  height: calc(100svh - ((32px*1.15) + 2rem));
+}
+
+.app-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.app-info > * {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.app-info label {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.app-info textarea {
+  height: 3lh;
+  min-height: 0;
+  resize: none;
+  border: 1px solid var(--ticket-border-color);
+  border-radius: 4px;
+  padding: 5px;
+}

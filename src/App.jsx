@@ -1,5 +1,6 @@
 import { useState, createContext } from "react";
 import Header from "./components/Header/Header";
+import { SideBar } from "./components/SideBar/SideBar";
 
 export const QuestionContext = createContext({});
 
@@ -10,7 +11,8 @@ function App() {
     <div className="page-layout">
       <QuestionContext.Provider value={question}>
         <Header setQuestion={setQuestion} />
-        <div className="primary-layout">
+        <div className="ticket-layout">
+          <SideBar/>
         </div>
       </QuestionContext.Provider>
     </div>

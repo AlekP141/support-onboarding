@@ -1,2 +1,10 @@
+@import "./App.css";
 @import "./components/Header/Header.css";
-@import "./components/Header/QuestionPicker/QuestionPicker.css"
+@import "./components/Header/QuestionPicker/QuestionPicker.css";
+@import "./components/SideBar/SideBar.css";
+
+:root {
+  --ticket-border-color: rgb(216,220,222);
+  --ticket-bg: #f8f9f9;
+  --text-color: rgb(47,57,65);
+}

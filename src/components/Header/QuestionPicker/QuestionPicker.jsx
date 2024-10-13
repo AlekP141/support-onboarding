@@ -17,7 +17,6 @@ const QuestionPicker = ({ setQuestion }) => {
     fetchData();
   }, []);
 
-
   const handleQuestionChange = (e) => {
     const { name, value } = e.target;
     setQuestion((prev) => ({
@@ -28,36 +27,27 @@ const QuestionPicker = ({ setQuestion }) => {
 
   const filteredQuestions = questionList.filter((q) => q.topic === question.topic);
 
-
-
   return (
-    <form className="question-picker">
-      <select
-        name="topic"
-        id="select-topic"
-        value={question.topic}
-        onChange={handleQuestionChange}
-      >
-        {[...new Set(questionList.map((q) => q.topic))].map((topic) => (
-          <option key={topic} value={topic}>
-            {topic}
-          </option>
-        ))}
-      </select>
+    <div className="question-section flex-group">
+      <p>Question:</p>
+      <form className="question-picker">
+        <select name="topic" id="select-topic" value={question.topic} onChange={handleQuestionChange}>
+          {[...new Set(questionList.map((q) => q.topic))].map((topic) => (
+            <option key={topic} value={topic}>
+              {topic}
+            </option>
+          ))}
+        </select>
 
-      <select
-        name="questionNumber"
-        id="select-question-number"
-        value={question.questionNumber}
-        onChange={handleQuestionChange}
-      >
-        {filteredQuestions.map((q) => (
-          <option key={`${q.topic}-${q.questionNumber}`} value={q.questionNumber}>
-            {q.questionNumber}
-          </option>
-        ))}
-      </select>
-    </form>
+        <select name="questionNumber" id="select-question-number" value={question.questionNumber} onChange={handleQuestionChange}>
+          {filteredQuestions.map((q) => (
+            <option key={`${q.topic}-${q.questionNumber}`} value={q.questionNumber}>
+              {q.questionNumber}
+            </option>
+          ))}
+        </select>
+      </form>
+    </div>
   );
 };
 

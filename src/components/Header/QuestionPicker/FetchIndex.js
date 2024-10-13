@@ -1,8 +1,7 @@
 import { algoliasearch } from "algoliasearch";
+import {APPLICATION_ID, SEARCH_API_KEY } from "../../consts";
 
 export const FetchIndex = async () => {
-  const APPLICATION_ID = "ZQM88NX272";
-  const SEARCH_API_KEY = "e4d63f91993089432d870cbc38cfe870";
 
   const client = algoliasearch(APPLICATION_ID, SEARCH_API_KEY);
   const response = await client.listIndices();
