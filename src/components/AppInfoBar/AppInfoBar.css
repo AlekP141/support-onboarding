@@ -1,0 +1,50 @@
+.app-info-bar {
+  width: 25%;
+  max-width: 300px;
+}
+
+.app-info-bar h2 {
+  font-size: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+.app-info-bar h3 {
+  color: #003dff;
+}
+
+.app-info-container {
+  padding-inline: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.algolia-app-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1;
+}
+
+.algolia-account-overview {
+  min-height: 62px;
+  gap: 0.5rem;
+  font-size: 14px;
+  align-items: center;
+}
+
+.algolia-account-overview img {
+  width: 32px;
+  aspect-ratio: 1;
+  border-radius: 4px;
+}
+
+.algolia-user-info a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #808080;
+}
+
+.algolia-user-info a:hover {
+  text-decoration: underline;
+}

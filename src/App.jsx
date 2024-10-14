@@ -1,6 +1,7 @@
 import { useState, createContext } from "react";
 import Header from "./components/Header/Header";
 import { SideBar } from "./components/SideBar/SideBar";
+import { AppInfoBar } from "./components/AppInfoBar/AppInfoBar";
 
 export const QuestionContext = createContext({});
 
@@ -13,6 +14,7 @@ function App() {
         <Header setQuestion={setQuestion} />
         <div className="ticket-layout">
           <SideBar/>
+          <AppInfoBar/>
         </div>
       </QuestionContext.Provider>
     </div>
