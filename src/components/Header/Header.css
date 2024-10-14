@@ -1,7 +1,7 @@
 header {
   justify-content: space-between;
   border-bottom: 1px solid var(--ticket-border-color);
-  padding-block: 1rem;
+  padding-block: 0.5rem;
   background-color: var(--ticket-bg);
   padding-inline: 1rem;
 }
@@ -13,9 +13,30 @@ header p {
 .header-resources {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .header-useful-group {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+}
+
+.header-useful-group svg {
+  height: 2rem;
+}
+
+.header-useful-group li {
+  padding-inline: 0.5rem;
+  border-right: solid 1px var(--ticket-border-color);
+  display: flex;
+  align-items: center;
+}
+
+.header-useful-group li:last-child {
+  border-right: none;
+}
+
+.header-useful-group a {
+  display: flex;
+  align-items: center;
 }
