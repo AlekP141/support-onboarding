@@ -2,6 +2,7 @@
 @import "./components/Header/Header.css";
 @import "./components/Header/QuestionPicker/QuestionPicker.css";
 @import "./components/SideBar/SideBar.css";
+@import "./components/AppInfoBar/AppInfoBar.css";
 
 :root {
   --ticket-border-color: rgb(216,220,222);
