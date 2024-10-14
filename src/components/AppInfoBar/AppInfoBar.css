@@ -26,6 +26,11 @@
   line-height: 1;
 }
 
+.algolia-org-info {
+  list-style: disc;
+  padding-inline-start: 40px;
+}
+
 .algolia-account-overview {
   min-height: 62px;
   gap: 0.5rem;

@@ -16,6 +16,23 @@ export const AppInfoBar = () => {
             <img src="https://819835.apps.zdusercontent.com/819835/assets/1707464129-4e56f77cdbf4d416015fc01216d6b0e0/icons/briefcase-solid.svg" alt="" />
             <h3>Organization</h3>
           </div>
+          <ul className="algolia-org-info">
+            <li>
+              <strong>ARR:</strong>
+            </li>
+            <li>
+              <strong>Main Account Plan:</strong>
+            </li>
+            <li>
+              <strong>AE:</strong>
+            </li>
+            <li>
+              <strong>CS Contact:</strong>
+            </li>
+            <li>
+              <strong>CS Coverage:</strong>
+            </li>
+          </ul>
         </div>
         <div className="algolia-user-info">
           <div className="algolia-app-subtitle">
