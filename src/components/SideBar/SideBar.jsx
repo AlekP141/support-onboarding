@@ -3,7 +3,7 @@ import { QuestionContext } from "../../App";
 import { APPLICATION_ID } from "../consts";
 
 export const SideBar = () => {
-  const question = useContext(QuestionContext);
+  const [question, setQuestion] = useContext(QuestionContext);
 
   return (
     <div className="side-bar-container">

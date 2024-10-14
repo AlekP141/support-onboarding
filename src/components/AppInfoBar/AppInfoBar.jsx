@@ -3,7 +3,7 @@ import { QuestionContext } from "../../App";
 import { APPLICATION_LIST } from "../consts";
 
 export const AppInfoBar = () => {
-  const question = useContext(QuestionContext);
+  const [question, setQuestion] = useContext(QuestionContext);
 
   return (
     <div className="app-info-bar">

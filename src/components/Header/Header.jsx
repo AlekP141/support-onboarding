@@ -1,9 +1,9 @@
 import QuestionPicker from "./QuestionPicker/QuestionPicker";
 
-const Header = ({ setQuestion }) => {
+const Header = () => {
   return (
     <header className="flex-group">
-      <QuestionPicker setQuestion={setQuestion} />
+      <QuestionPicker/>
       <div className="header-resources">
         <p>Useful Resources:</p>
         <ul className="header-useful-group">

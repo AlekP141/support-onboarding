@@ -1,6 +1,7 @@
 .app-info-bar {
   width: 25%;
   max-width: 300px;
+  border-left: 1px solid var(--ticket-border-color);
 }
 
 .app-info-bar h2 {
@@ -68,10 +69,6 @@
 .algolia-user-info-list {
   list-style: disc;
   padding-inline-start: 40px;
-}
-
-.algolia-applications-list {
-  gap:
 }
 
 .algolia-applications-list a {
