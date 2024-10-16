@@ -1,0 +1,20 @@
+.message-layout-grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 5rem 1fr 2.5rem;
+  grid-template-areas: "avatar header menu" "avatar text menu";
+  margin-block: 0.75rem;
+
+}
+
+.message-avatar {
+  grid-area: avatar;
+}
+
+.message-sender-info {
+  grid-area: header;
+}
+
+.message-body {
+  grid-area: text;
+}

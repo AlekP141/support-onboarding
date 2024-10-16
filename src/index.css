@@ -4,9 +4,11 @@
 @import "./components/SideBar/SideBar.css";
 @import "./components/AppInfoBar/AppInfoBar.css";
 @import "./components/CentralTextArea/CentralTextArea.css";
+@import "./components/CentralTextArea/RenderMessage/RenderMessage.css";
 
 :root {
   --ticket-border-color: rgb(216,220,222);
   --ticket-bg: #f8f9f9;
+  --ticket-faded-text: #68737D;
   --text-color: rgb(47,57,65);
 }

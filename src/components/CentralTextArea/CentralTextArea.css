@@ -7,6 +7,37 @@
 .text-area-container {
   flex-grow: 1;
 }
+.text-area-header {
+  padding: 0.75rem 1rem;
+  border-bottom: solid 1px var(--ticket-border-color)
+}
+
+.ta-header-title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.ta-header-sla {
+  display: flex;
+  font-size: 0.75rem;
+}
+
+.ta-header-sla-count {
+  background-color: rgb(209,232,223);
+  color: rgb(11,59,41);
+  min-width: 2rem;
+  text-align: center;
+  border-radius: 2px;
+  padding: 0 0.25rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.ta-header-web-form {
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--ticket-border-color);
+  color: var(--ticket-faded-text)
+}
 
 .text-area-reply {
   width: 100%;
