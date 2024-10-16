@@ -41,9 +41,39 @@
 }
 
 .text-area-reply {
-  width: 100%;
+  border-top: 1px solid var(--ticket-border-color);
 }
 
 .text-area-reply * {
   width: 100%;
+  background: transparent;
+}
+
+.text-area-reply-header {
+  display: flex;
+  font-size: 0.8rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text-area-reply-header select {
+  width: fit-content;
+  padding: 0.5rem 0.75rem;
+  border: none;
+}
+
+.tar-header-recipients {
+  padding-left: 1rem;
+  border-left: 1px solid var(--ticket-border-color);
+  height: min-content;
+  color: var(--ticket-faded-text);
+}
+
+.text-area-reply textarea {
+  border: none;
+  background: transparent;
+}
+
+.internal-note {
+  background-color: rgb(255,247, 237);
 }
