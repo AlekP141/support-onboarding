@@ -1,9 +1,16 @@
-import { useContext } from "react";
-import { QuestionContext } from "../../App";
 import { APPLICATION_LIST } from "../consts";
 
 export const AppInfoBar = () => {
-  const [question, setQuestion] = useContext(QuestionContext);
+
+  const ARR = Math.floor(Math.random()*150000)
+  let csCoverage
+  if (ARR < 30000) {
+    csCoverage = "Low Touch"
+  } else if (ARR < 100000) {
+    csCoverage = "Mid Touch"
+  } else {
+    csCoverage = "High Touch"
+  }
 
   return (
     <div className="app-info-bar">
@@ -20,7 +27,7 @@ export const AppInfoBar = () => {
           </div>
           <ul className="algolia-org-info">
             <li>
-              <strong>ARR:</strong>
+              <strong>ARR: </strong>{ARR.toLocaleString('en', {useGrouping: true})}
             </li>
             <li>
               <strong>Main Account Plan:</strong>
@@ -32,7 +39,7 @@ export const AppInfoBar = () => {
               <strong>CS Contact:</strong>
             </li>
             <li>
-              <strong>CS Coverage:</strong>
+              <strong>CS Coverage: </strong>{csCoverage}
             </li>
           </ul>
         </div>
@@ -41,7 +48,7 @@ export const AppInfoBar = () => {
             <img src="https://819835.apps.zdusercontent.com/819835/assets/1707464129-4e56f77cdbf4d416015fc01216d6b0e0/icons/user-solid.svg" alt="" />
             <div className="algolia-user">
               <h3>User</h3>
-              <a href="">Admin link</a>
+              <a href="https://admin/algolia.com/admin/users/810007">Admin link</a>
             </div>
           </div>
           <div className="algolia-perso-indicator">

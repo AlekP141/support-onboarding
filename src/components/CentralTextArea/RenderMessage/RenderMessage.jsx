@@ -3,7 +3,7 @@ import { QuestionContext } from "../../../App";
 
 const RenderMessage = ({ message }) => {
   const { sender, text } = message;
-  const [question, setQuestion] = useContext(QuestionContext);
+  const [question] = useContext(QuestionContext);
   const customer = question.customer;
 
   return (

@@ -3,7 +3,7 @@ import { QuestionContext } from "../../App";
 import RenderMessage from "./RenderMessage/RenderMessage";
 
 export const CentralTextArea = () => {
-  const [question, setQuestion] = useContext(QuestionContext);
+  const [question] = useContext(QuestionContext);
 
   return (
     <div className="text-area-structure">
