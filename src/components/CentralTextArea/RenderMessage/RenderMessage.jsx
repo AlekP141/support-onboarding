@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { QuestionContext } from "../../../App";
+
 const RenderMessage = ({ message }) => {
   const { sender, text } = message;
+  const [question, setQuestion] = useContext(QuestionContext);
+  const customer = question.customer;
 
   return (
     <div className="message-layout">
@@ -23,10 +28,10 @@ const RenderMessage = ({ message }) => {
           ) : null}
         </div>
         <div className="message-sender-info">
-          <div className="message-sender-name">{sender === "customer" ? "Temp Cust Name" : "Algolia Support"}</div>
+          <div className="message-sender-name">{sender === "customer" ? customer : "Algolia Support"}</div>
           <div className="message-recipient">
             <strong>To:</strong>
-            <span className="message-recipient-name">{sender === "customer" ? "Algolia Support" : "Temp Cust Name"}</span>
+            <span className="message-recipient-name">{sender === "customer" ? "Algolia Support" : customer }</span>
           </div>
         </div>
       </div>

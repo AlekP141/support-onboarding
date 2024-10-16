@@ -5,6 +5,7 @@
       "topic": "synonyms",
       "questionNumber": "1",
       "title": "Synonyms 1 Test Title",
+      "customer": "John Doe",
       "messages": [
         {
           "sender": "customer",
@@ -18,6 +19,7 @@
       "topic": "synonyms",
       "questionNumber": "2",
       "title": "Synonyms Two Test",
+      "customer": "John Doe",
       "messages": [
         {
           "sender": "customer",
@@ -35,6 +37,7 @@
       "topic": "rules",
       "questionNumber": "1",
       "title": "Rules Test title",
+      "customer": "John Doe",
       "messages": [
         {
           "sender": "customer",
