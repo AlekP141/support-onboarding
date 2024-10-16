@@ -17,6 +17,10 @@
   aspect-ratio: 1;
   margin-inline: 1.25rem;
   border-radius: 50%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 .customer-avatar {
@@ -36,6 +40,12 @@
 }
 
 .support-avatar-subicon {
+  position: absolute;
+  inset-inline-start: 1.5rem;
+  inset-block-start: 1.5rem;
+}
+
+.support-avatar-subicon svg {
   box-sizing: border-box;
   padding: 1px;
   display: inline;
