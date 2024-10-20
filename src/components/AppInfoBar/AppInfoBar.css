@@ -10,7 +10,7 @@
 }
 
 .app-info-bar h3 {
-  color: #003dff;
+  color: var(--algolia-blue);
 }
 
 .app-info-container {

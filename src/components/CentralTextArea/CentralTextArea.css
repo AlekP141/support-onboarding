@@ -42,6 +42,8 @@
 
 .text-area-reply {
   border-top: 1px solid var(--ticket-border-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .text-area-reply * {
@@ -72,6 +74,9 @@
 .text-area-reply textarea {
   border: none;
   background: transparent;
+  resize: block;
+  font-size: 0.8rem;
+  height: 12lh;
 }
 
 .internal-note {

@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   border-right: solid 1px var(--ticket-border-color);
-  height: calc(100svh - ((32px*1.15) + 2rem));
 }
 .side-bar-container label {
   font-weight: 700;

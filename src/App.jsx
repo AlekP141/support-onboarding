@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import { SideBar } from "./components/SideBar/SideBar";
 import { AppInfoBar } from "./components/AppInfoBar/AppInfoBar";
 import { CentralTextArea } from "./components/CentralTextArea/CentralTextArea";
+import { Footer } from "./components/Footer/Footer"
 import questionsData from "../questions.json";
 
 export const QuestionContext = createContext();
@@ -19,6 +20,7 @@ function App() {
           <CentralTextArea/>
           <AppInfoBar/>
         </div>
+        <Footer/>
       </QuestionContext.Provider>
     </div>
   );
