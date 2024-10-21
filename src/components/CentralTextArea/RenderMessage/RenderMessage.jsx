@@ -6,6 +6,12 @@ const RenderMessage = ({ message }) => {
   const [question] = useContext(QuestionContext);
   const customer = question.customer;
 
+  // TEST TO SEE HOW TO APPEND INFO TO URL ON SAME PAGE - WORKING
+  // const url = window.location.href;
+  // const newUrl = url.includes('?') ? `${url}&a` : `${url}?a`;
+  // window.history.pushState({}, "", newUrl);
+  // console.log(newUrl);
+
   return (
     <div className="message-layout">
       <div className="message-header">
