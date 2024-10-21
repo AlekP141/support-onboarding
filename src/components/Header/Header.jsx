@@ -3,12 +3,12 @@ import QuestionPicker from "./QuestionPicker/QuestionPicker";
 const Header = () => {
   return (
     <header className="flex-group">
-      <QuestionPicker/>
+      <QuestionPicker />
       <div className="header-resources">
         <p>Useful Resources:</p>
         <ul className="header-useful-group">
           <li>
-            <a href="https://algolia.zendesk.com/agent/search">
+            <a href="https://algolia.zendesk.com/agent/search" target="blank">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" aria-label="Zendesk">
                 <path d="M37.5 8.8v24.4H17.4L37.5 8.8zm0-8.8c0 5.6-4.5 10.1-10.1 10.1s-10-4.5-10-10.1h20.1zm3.3 33.1c0-5.6 4.5-10.1 10.1-10.1S61 27.5 61 33.1H40.8zm0-8.7V0H61L40.8 24.4z"></path>
                 <path d="M54.6 49.8c-.2-1.4-1.1-2.4-2.7-2.4-1.5 0-2.6.9-2.9 2.4h5.6zm-2.5 4.1c1.3 0 2.2-.5 2.8-1.1l1.4 1.5c-.9.9-2.2 1.6-4.2 1.6-3.4 0-5.6-2.2-5.6-5.3 0-3 2.3-5.3 5.2-5.3 3.4 0 5.2 2.6 5.1 6.1H49c.3 1.6 1.3 2.5 3.1 2.5zM0 53.8l6.1-6.2h-6v-2h8.8v2l-6.1 6.2H9v2H0v-2zm18.3-4c-.2-1.4-1.1-2.4-2.7-2.4-1.5 0-2.6.9-2.9 2.4h5.6zm-2.4 4.1c1.3 0 2.2-.5 2.8-1.1l1.4 1.5c-.9.9-2.2 1.6-4.2 1.6-3.4 0-5.6-2.2-5.6-5.3 0-3 2.3-5.3 5.2-5.3 3.4 0 5.2 2.6 5.1 6.1h-7.9c.4 1.6 1.4 2.5 3.2 2.5zm26.6-3.2c0-1.8-1.4-3.3-3.2-3.3-1.8 0-3.2 1.4-3.2 3.3s1.4 3.3 3.2 3.3c1.8 0 3.2-1.5 3.2-3.3zm-8.6 0c0-3.3 2.4-5.3 5.1-5.3 1.3 0 2.6.6 3.4 1.5v-6h2.2v14.8h-2.2v-1.4c-.8 1-2.1 1.6-3.4 1.6-2.6.1-5.1-2-5.1-5.2zm24.4 3 2-1c.6.9 1.4 1.5 2.6 1.5 1.2 0 1.9-.6 1.9-1.3 0-.8-1.2-1-2.5-1.3-1.7-.4-3.5-.9-3.5-3 0-1.6 1.5-3.1 3.9-3.1 1.9 0 3.3.7 4.1 2l-1.8 1c-.5-.7-1.3-1.2-2.3-1.2-1.2 0-1.8.6-1.8 1.2 0 .7.9.9 2.4 1.3 1.7.3 3.6.9 3.6 3 0 1.4-1.2 3.3-4.1 3.3-2.1-.1-3.6-.9-4.5-2.4zm14.5-2.4-1.7 1.9v2.6h-2.2V41h2.2v9.7l4.6-5h2.6l-4 4.3 4.1 5.8h-2.5l-3.1-4.5zm-45.4-5.9c-2.6 0-4.7 1.7-4.7 4.4v5.9h2.2v-5.6c0-1.7.9-2.7 2.6-2.7s2.4 1 2.4 2.7v5.6h2.2v-5.9c0-2.7-2.2-4.4-4.7-4.4z"></path>
@@ -16,7 +16,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="https://www.algolia.com/doc/">
+            <a href="https://www.algolia.com/doc/" target="blank">
               <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 50">
                 <g fill="#003dff">
                   <path
@@ -34,7 +34,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="https://support.algolia.com/hc/en-us">
+            <a href="https://support.algolia.com/hc/en-us" target="blank">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 50" xmlns:svg="http://www.w3.org/2000/svg">
                 <g className="layer">
                   <title>Layer 1</title>

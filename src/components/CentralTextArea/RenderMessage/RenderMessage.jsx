@@ -16,7 +16,7 @@ const RenderMessage = ({ message }) => {
               <path d="M8 10a6 6 0 0 0-6 5.47.5.5 0 0 0 .5.53h10.97a.5.5 0 0 0 .5-.53A6 6 0 0 0 8 10z"></path>
             </g>
           </svg>
-          {sender === "support" ? (
+          {sender === "support" || sender === "support-internal" ? (
             <div className="support-avatar-subicon">
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true" focusable="false" data-test-id="omni-log-avatar-badge-AgentBadge">
                 <path
@@ -30,12 +30,13 @@ const RenderMessage = ({ message }) => {
         <div className="message-sender-info">
           <div className="message-sender-name">{sender === "customer" ? customer : "Algolia Support"}</div>
           <div className="message-recipient">
+            {sender === "support-internal" ? <div className="message-internal-icon">Internal</div> : null}
             <strong>To:</strong>
-            <span className="message-recipient-name">{sender === "customer" ? "Algolia Support" : customer }</span>
+            <span className="message-recipient-name">{sender === "customer" ? "Algolia Support" : customer}</span>
           </div>
         </div>
       </div>
-      <p className={`message-body ${sender === "customer" ? "customer-message" : "support-message"}`}>{text}</p>
+      <p className={`message-body ${sender === "customer" ? "customer-message" : sender === "support" ? "support-message" : "internal-note"}`}>{text}</p>
     </div>
   );
 };

@@ -5,9 +5,22 @@ import RenderMessage from "./RenderMessage/RenderMessage";
 export const CentralTextArea = () => {
   const [question] = useContext(QuestionContext);
   const [replyType, setReplyType] = useState("public-reply");
+  const [userMessages, setUserMessages] = useState([]);
 
   const handleReplyType = (e) => {
     setReplyType(e.target.value);
+  };
+
+  const handleSubmitMessage = (e) => {
+    e.preventDefault();
+    const userMessage = {
+      text: e.target.value,
+      sender: replyType === "internal-note" ? "support-internal" : "support",
+    };
+    
+    setUserMessages((prev) => {
+      [...prev, userMessage];
+    });
   };
 
   return (
@@ -23,6 +36,9 @@ export const CentralTextArea = () => {
         {question.messages.map((message, index) => (
           <RenderMessage key={`${question}-${index}`} message={message}></RenderMessage>
         ))}
+        {userMessages.map((message, index) => (
+          <RenderMessage key={`userMessage-${index}`} message={message}></RenderMessage>
+        ))}
       </div>
       <div className={`text-area-reply ${replyType}`}>
         <div className="text-area-reply-header">
@@ -32,7 +48,9 @@ export const CentralTextArea = () => {
           </select>
           {replyType === "public-reply" ? <div className="tar-header-recipients">{question.customer}</div> : null}
         </div>
-        <textarea name="replyArea" id=""></textarea>
+        <form onSubmit={handleSubmitMessage}>
+          <textarea name="replyArea" id=""></textarea>
+        </form>
       </div>
     </div>
   );
