@@ -34,7 +34,7 @@ export const SideBar = () => {
         </div>
         <div className="app-index">
           <label htmlFor="app-index-area">Index Name</label>
-          <textarea name="app-index-area" defaultValue={`${question.topic}-${question.questionNumber}`}></textarea>
+          <textarea name="app-index-area" value={`${question.topic}-${question.questionNumber}`}></textarea>
         </div>
       </div>
     </div>
