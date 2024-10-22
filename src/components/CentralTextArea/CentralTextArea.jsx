@@ -27,8 +27,6 @@ export const CentralTextArea = () => {
     const availableHints = [...question.hints];
     const hintInterval = setInterval(() => {
       if (currentHints.length < availableHints.length) {
-        console.log(currentHints.length)
-        console.log(availableHints.length)
         setCurrentHints((prev) => [...prev, availableHints[prev.length]]);
       } else {
         clearInterval(hintInterval);
