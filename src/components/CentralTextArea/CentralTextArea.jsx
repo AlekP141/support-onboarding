@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { QuestionContext } from "../../App";
 import RenderMessage from "./RenderMessage/RenderMessage";
+import { HintMessage } from "./RenderMessage/HintMessage";
 
 export const CentralTextArea = () => {
   const [question] = useContext(QuestionContext);
   const [replyType, setReplyType] = useState("public-reply");
   const [userMessages, setUserMessages] = useState([]);
+  const [currentHints, setCurrentHints] = useState([]);
 
   const handleReplyType = (e) => {
     setReplyType(e.target.value);
@@ -17,11 +19,24 @@ export const CentralTextArea = () => {
       text: e.target.value,
       sender: replyType === "internal-note" ? "support-internal" : "support",
     };
-    
-    setUserMessages((prev) => {
-      [...prev, userMessage];
-    });
+
+    setUserMessages((prev) => [...prev, userMessage]);
   };
+
+  useEffect(() => {
+    const availableHints = [...question.hints];
+    const hintInterval = setInterval(() => {
+      if (currentHints.length < availableHints.length) {
+        console.log(currentHints.length)
+        console.log(availableHints.length)
+        setCurrentHints((prev) => [...prev, availableHints[prev.length]]);
+      } else {
+        clearInterval(hintInterval);
+      }
+    }, 5000);
+
+    return () => clearInterval(hintInterval);
+  }, [question, currentHints]);
 
   return (
     <div className="text-area-structure">
@@ -38,6 +53,9 @@ export const CentralTextArea = () => {
         ))}
         {userMessages.map((message, index) => (
           <RenderMessage key={`userMessage-${index}`} message={message}></RenderMessage>
+        ))}
+        {currentHints.map((hint, index) => (
+          <HintMessage key={`${question.indexName}-hint-${index + 1}`} hint={hint} />
         ))}
       </div>
       <div className={`text-area-reply ${replyType}`}>

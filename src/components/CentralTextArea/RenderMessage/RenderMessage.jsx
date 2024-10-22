@@ -8,7 +8,7 @@ const RenderMessage = ({ message }) => {
 
   // TEST TO SEE HOW TO APPEND INFO TO URL ON SAME PAGE - WORKING
   // const url = window.location.href;
-  // const newUrl = url.includes('?') ? `${url}&a` : `${url}?a`;
+  // const newUrl = url.includes('?a') ? `${url}?a` : `${url}`;
   // window.history.pushState({}, "", newUrl);
   // console.log(newUrl);
 
@@ -34,7 +34,7 @@ const RenderMessage = ({ message }) => {
           ) : null}
         </div>
         <div className="message-sender-info">
-          <div className="message-sender-name">{sender === "customer" ? customer : "Algolia Support"}</div>
+          <div className="message-sender-name">{sender === "customer" ? customer : sender === "hint" ? "Matthew Bond" : "Algolia Support"}</div>
           <div className="message-recipient">
             {sender === "support-internal" ? <div className="message-internal-icon">Internal</div> : null}
             <strong>To:</strong>
