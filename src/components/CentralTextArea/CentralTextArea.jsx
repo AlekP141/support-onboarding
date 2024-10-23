@@ -17,25 +17,12 @@ export const CentralTextArea = () => {
   const handleSubmitMessage = (e) => {
     e.preventDefault();
     const userMessage = {
-      text: e.target.value,
+      text: e.target.elements["replyArea"].value,
       sender: replyType === "internal-note" ? "support-internal" : "support",
     };
-
     setUserMessages((prev) => [...prev, userMessage]);
+    e.target.elements["replyArea"].value = "";
   };
-
-  // useEffect(() => {
-  //   const availableHints = [...question.hints];
-  //   const hintInterval = setInterval(() => {
-  //     if (currentHints.length < availableHints.length) {
-  //       setCurrentHints((prev) => [...prev, availableHints[prev.length]]);
-  //     } else {
-  //       clearInterval(hintInterval);
-  //     }
-  //   }, 5000);
-
-  //   return () => clearInterval(hintInterval);
-  // }, [question, currentHints]);
 
   return (
     <div className="text-area-structure">
@@ -56,7 +43,7 @@ export const CentralTextArea = () => {
         {currentHints.map((hint, index) => (
           <HintMessage key={`${question.indexName}-hint-${index + 1}`} hint={hint} />
         ))}
-        <HintGenerator {...{setCurrentHints}} {...{currentHints}} />
+        <HintGenerator {...{ setCurrentHints }} {...{ currentHints }} />
       </div>
       <div className={`text-area-reply ${replyType}`}>
         <div className="text-area-reply-header">
@@ -66,8 +53,8 @@ export const CentralTextArea = () => {
           </select>
           {replyType === "public-reply" ? <div className="tar-header-recipients">{question.customer}</div> : null}
         </div>
-        <form onSubmit={handleSubmitMessage}>
-          <textarea name="replyArea" id=""></textarea>
+        <form id="submit-text-form" onSubmit={handleSubmitMessage}>
+          <textarea name="replyArea"></textarea>
         </form>
       </div>
     </div>
