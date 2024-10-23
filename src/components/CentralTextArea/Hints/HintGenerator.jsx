@@ -21,7 +21,7 @@ const HintGenerator = ({ setCurrentHints, currentHints }) => {
     }
 
     window.history.pushState({}, "", url);
-  }, [currentHints]);
+  }, [currentHints, question]);
 
   if (currentHints.length < availableHints.length) {
     return (
