@@ -17,7 +17,7 @@ const HintGenerator = ({ setCurrentHints, currentHints }) => {
     if (regex.test(url)) {
       url = url.replace(regex, `/h${currentHints.length}/`);
     } else {
-      url = `${url}h1/`;
+      url = `${url}/h${currentHints.length}/`;
     }
 
     window.history.pushState({}, "", url);
@@ -35,9 +35,3 @@ const HintGenerator = ({ setCurrentHints, currentHints }) => {
 };
 
 export default HintGenerator;
-
-// TEST TO SEE HOW TO APPEND INFO TO URL ON SAME PAGE - WORKING
-// const url = window.location.href;
-// const newUrl = url.includes('?a') ? `${url}?a` : `${url}`;
-// window.history.pushState({}, "", newUrl);
-// console.log(newUrl);
