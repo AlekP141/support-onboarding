@@ -1,0 +1,22 @@
+.hint-gen-area {
+    width: 56px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--ticket-bg);
+    border: 1px solid var(--ticket-border-color);
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    text-align: center;
+    align-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ticket-faded-text);
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.hint-gen-area:hover {
+    opacity: 1;
+}

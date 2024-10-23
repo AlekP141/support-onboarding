@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { QuestionContext } from "../../App";
 import RenderMessage from "./RenderMessage/RenderMessage";
-import { HintMessage } from "./RenderMessage/HintMessage";
+import { HintMessage } from "./Hints/HintMessage";
+import HintGenerator from "./Hints/HintGenerator";
 
 export const CentralTextArea = () => {
   const [question] = useContext(QuestionContext);
@@ -23,18 +24,18 @@ export const CentralTextArea = () => {
     setUserMessages((prev) => [...prev, userMessage]);
   };
 
-  useEffect(() => {
-    const availableHints = [...question.hints];
-    const hintInterval = setInterval(() => {
-      if (currentHints.length < availableHints.length) {
-        setCurrentHints((prev) => [...prev, availableHints[prev.length]]);
-      } else {
-        clearInterval(hintInterval);
-      }
-    }, 5000);
+  // useEffect(() => {
+  //   const availableHints = [...question.hints];
+  //   const hintInterval = setInterval(() => {
+  //     if (currentHints.length < availableHints.length) {
+  //       setCurrentHints((prev) => [...prev, availableHints[prev.length]]);
+  //     } else {
+  //       clearInterval(hintInterval);
+  //     }
+  //   }, 5000);
 
-    return () => clearInterval(hintInterval);
-  }, [question, currentHints]);
+  //   return () => clearInterval(hintInterval);
+  // }, [question, currentHints]);
 
   return (
     <div className="text-area-structure">
@@ -55,6 +56,7 @@ export const CentralTextArea = () => {
         {currentHints.map((hint, index) => (
           <HintMessage key={`${question.indexName}-hint-${index + 1}`} hint={hint} />
         ))}
+        <HintGenerator {...{setCurrentHints}} {...{currentHints}} />
       </div>
       <div className={`text-area-reply ${replyType}`}>
         <div className="text-area-reply-header">

@@ -6,6 +6,7 @@
 @import "./components/CentralTextArea/CentralTextArea.css";
 @import "./components/CentralTextArea/RenderMessage/RenderMessage.css";
 @import "./components/Footer/Footer.css";
+@import "./components/CentralTextArea/Hints/HintGenerator.css";
 
 :root {
   --ticket-border-color: rgb(216,220,222);
