@@ -22,6 +22,10 @@ export const CentralTextArea = () => {
     };
     setUserMessages((prev) => [...prev, userMessage]);
     e.target.elements["replyArea"].value = "";
+    const encodedStr = btoa(JSON.stringify([...userMessages, userMessage]));
+    let url = window.location.href;
+    url += encodedStr;
+    window.history.pushState({}, "", url);
   };
 
   return (

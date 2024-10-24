@@ -22,7 +22,6 @@ const QuestionPicker = () => {
   
     setQuestion(selectedQuestion);
 
-    console.log(selectedQuestion)
     const urlOrigin = window.location.origin;
     let url = `${urlOrigin}/${selectedQuestion.topic}-${selectedQuestion.questionNumber}`
     window.history.pushState({}, "", url)
